@@ -1,0 +1,39 @@
+﻿<Window x:Class="BindingNegocio.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BindingNegocio"
+        mc:Ignorable="d"
+        Title="Demo Binding con Objeto de Negocio" MinHeight="400" MinWidth="600">
+
+    <StackPanel x:Name="datosStackPanel" Margin="0,0,110,34">
+        <TextBlock Margin="10">Nombre:</TextBlock>
+        <TextBox x:Name="nombreTextBox" 
+                 Margin="10" 
+                 Width="400" 
+                 HorizontalAlignment="Left"
+                 Text="{Binding Path=Nombre, Mode=TwoWay}"
+                 >
+       </TextBox>
+       
+        <TextBlock Margin="10">Edad:</TextBlock>
+        <TextBox x:Name="edadTextBox" 
+                 Margin="10" 
+                 Width="400" 
+                 HorizontalAlignment="Left"
+                 Text="{Binding Path=Edad, Mode=TwoWay}"
+                 >
+        </TextBox>
+        <Button x:Name="button" 
+                Content="Consultar/Actualizar OBJETO" 
+                Margin="10" 
+                Width="75" 
+                HorizontalAlignment="Left"
+                Click="button_Click"
+                >   
+        </Button>
+
+    </StackPanel>  
+    
+</Window>
